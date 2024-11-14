@@ -1,0 +1,7 @@
+{
+  "extends": "@ecommerce/typescript/base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist"
+  }
+}

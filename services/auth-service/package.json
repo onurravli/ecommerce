@@ -1,0 +1,22 @@
+{
+  "name": "@ecommerce/auth-service",
+  "scripts": {
+    "build": "tsc -p .",
+    "build:dev": "tsc --watch -p .",
+    "dev": "concurrently \"npm run build:dev\" \"npm run start:dev\"",
+    "start": "node dist/server.js",
+    "start:dev": "node --watch dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@ecommerce/typescript": "workspace:*",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "concurrently": "^9.1.0",
+    "typescript": "^5.6.3"
+  }
+}

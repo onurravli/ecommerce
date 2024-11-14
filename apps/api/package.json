@@ -1,0 +1,27 @@
+{
+  "name": "@ecommerce/api",
+  "scripts": {
+    "build": "tsc -p .",
+    "build:dev": "tsc --watch -p .",
+    "dev": "concurrently \"npm run build:dev\" \"npm run start:dev\"",
+    "start": "node dist/server.js",
+    "start:dev": "node --watch dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-http-proxy": "^2.1.1"
+  },
+  "devDependencies": {
+    "@ecommerce/shared": "workspace:*",
+    "@ecommerce/typescript": "workspace:*",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/express-http-proxy": "^1.6.6",
+    "@types/node": "^22.9.0",
+    "concurrently": "^9.1.0",
+    "typescript": "^5.6.3"
+  }
+}

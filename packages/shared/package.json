@@ -1,0 +1,20 @@
+{
+  "name": "@ecommerce/shared",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3",
+    "@ecommerce/typescript": "workspace:*"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "typecheck": "tsc --noEmit"
+  }
+}

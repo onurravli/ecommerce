@@ -1,0 +1,28 @@
+{
+  "name": "@ecommerce/root",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "sort": "sort-package-json package.json \"apps/*/package.json\" \"packages/*/package.json\" \"services/*/package.json\"",
+    "start": "turbo run start --parallel",
+    "typecheck": "turbo run typecheck",
+    "setenv:dev": "for dir in apps/* packages/* services/*; do if [ -d \"$dir\" ]; then ln -sf $(pwd)/.env.development \"$dir/.env.development\" && echo \"Linked .env.development in $dir\"; fi; done",
+    "setenv:prod": "for dir in apps/* packages/* services/*; do if [ -d \"$dir\" ]; then ln -sf $(pwd)/.env.production \"$dir/.env.production\" && echo \"Linked .env.production in $dir\"; fi; done"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0",
+    "prettier": "^3.3.3",
+    "sort-package-json": "^2.10.1",
+    "turbo": "^2.2.3",
+    "typescript-eslint": "^8.14.0"
+  },
+  "packageManager": "pnpm@9.12.2"
+}
